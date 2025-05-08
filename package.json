@@ -12,7 +12,7 @@
     "url": "https://github.com/doinel1a/astro-vanilla-ts"
   },
   "scripts": {
-    "postinstall": "husky & playwright install",
+    "postinstall": "playwright install",
     "lint": "eslint src/**/*.{astro,js,jsx,ts,tsx}",
     "lint:fix": "eslint --fix",
     "prettier": "prettier --write **/**/*.{astro,css,scss,js,cjs,mjs,ts,tsx}",
@@ -21,36 +21,10 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.tsx": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.astro": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.json": [
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
-    ]
-  },
   "dependencies": {
     "astro": "^5.5.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^18.6.3",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@playwright/test": "^1.51.1",
     "@tailwindcss/postcss": "^4.0.15",
@@ -68,8 +42,6 @@
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-sonarjs": "^3.0.2",
     "eslint-plugin-unicorn": "^58.0.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.5.2",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
